@@ -1,4 +1,6 @@
 
+<?php
+
 add_action( 'woocommerce_cart_calculate_fees', 'descuento_por_monto_y_producto_especifico', 20, 1 );
 
 function descuento_por_monto_y_producto_especifico( $cart ) {
@@ -47,3 +49,4 @@ function descuento_por_monto_y_producto_especifico( $cart ) {
         $cart->add_fee( 'Book Dalmir al 50%', -$descuento_producto );
     }
 }
+

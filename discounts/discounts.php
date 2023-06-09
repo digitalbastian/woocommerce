@@ -1,6 +1,13 @@
 
 <?php
 
+/*
+Plugin Name: Añade descuentos a todos los products en general
+Description: Todos los productos tendran un descuento espesifico
+Version: 1.0
+Author: Digital Bastian
+*/
+
 add_action( 'woocommerce_cart_calculate_fees', 'descuento_por_monto_y_producto_especifico', 20, 1 );
 
 function descuento_por_monto_y_producto_especifico( $cart ) {

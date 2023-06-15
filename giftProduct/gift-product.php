@@ -74,6 +74,11 @@ function wc_cpg_apply_coupon( $coupon_code ) {
 
     // Obtener los productos gratuitos asociados con el cupón
     $free_products = get_post_meta( $coupon_id, 'wc_cpg_free_products', true );
+
+    if (empty($free_products)) {
+        return;
+    }
+
     $free_products = explode( ',', $free_products );
 
     // Agregar los productos gratuitos al carrito
